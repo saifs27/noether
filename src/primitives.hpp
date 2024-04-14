@@ -12,25 +12,23 @@ struct Vector3
 	float x, y, z;
 	Vector3(float x, float y, float z) : x(x), y(y), z(z) {}
 	float length();
+	void normalize();
 
 	Vector3 operator*(Vector3 vec);
 	Vector3 operator+(Vector3 vec);
 	Vector3 operator-(Vector3 vec);
 
-
-
 	// Multiplication by scalar
 	Vector3 operator*(float scalar); 
-	void operator*=(float scalar);
-
-
-	
+	void operator*=(float scalar);	
 
 };
 
-struct Vector2
+struct Sphere
 {
-	float x, y;
+	Vector3 center;
+	float radius;
+	Sphere(Vector3 position, float rad) : center(position), radius(rad) {}
 };
 
 struct Triangle
@@ -40,6 +38,7 @@ struct Triangle
 	Vector3 z;
 	
 };
+
 
 struct Object
 {
