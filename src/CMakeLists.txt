@@ -3,7 +3,7 @@
 #
 
 # Add source to this project's executable.
-add_executable (${PROJECT_NAME}  "main.cpp" "collisions.cpp" "primitives.cpp" "render/object.cpp")
+add_executable (${PROJECT_NAME}  "main.cpp" "physics/collisions.cpp" "physics/primitives.cpp" "physics/world.cpp" "render/object.cpp")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET ${PROJECT_NAME}  PROPERTY CXX_STANDARD 20)
