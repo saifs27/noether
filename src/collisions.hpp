@@ -3,9 +3,9 @@
 namespace noether
 {
 
-	class SphereCollision
-	{
-		
-	};
+    class SphereCollision
+    {
+        
+    };
 
 }
