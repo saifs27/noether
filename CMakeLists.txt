@@ -6,6 +6,8 @@ if (POLICY CMP0141)
   set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
 endif()
 
+set(CMAKE_TOOLCHAIN_FILE "${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake" CACHE STRING "") 
+
 project ("noether")
 
 # Vulkan SDK
@@ -38,7 +40,10 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(glfw)
 
+find_package(imgui CONFIG REQUIRED)
+
 # Include sub-projects.
+
 add_subdirectory ("src")
 
 
