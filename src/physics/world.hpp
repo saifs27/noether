@@ -1,16 +1,17 @@
 #pragma once
 #include "primitives.hpp"
+#include "object.hpp"
 namespace noether 
 {
     struct World 
     {
     private:
-        std::vector<Object&> objects;
-        Vector3 gravity = Vector3(0, -9.8, 0);
+        std::vector<Object> objects;
+        std::vector<Vector3> forces;
 
     public:
-        void add_object(Object& object);
-        void remove_object(Object& object);
+        void add_object(Object object);
+        void remove_object(Object object);
         void update(float dt);
     };
 }

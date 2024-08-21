@@ -39,13 +39,12 @@ struct Triangle
     
 };
 
-
-struct Object
-{
-    Vector3 position;
-    Vector3 velocity;
-    Vector3 force;
-    float mass;
+struct Spring {
+    float k;
 };
+
+
+
+
 
 }
