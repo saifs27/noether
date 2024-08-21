@@ -10,6 +10,9 @@ objs
 .vs/
 .vscode/
 
+vcpkg_installed
+vcpkg-configuration.json
+
 # Visual C++ cache files
 ipch/
 *.aps
